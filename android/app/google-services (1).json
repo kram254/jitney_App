@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "639776671435",
+    "project_id": "jitneyapp-28511",
+    "storage_bucket": "jitneyapp-28511.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639776671435:android:14365abf6c2f586c203d4e",
+        "android_client_info": {
+          "package_name": "com.example.jitney_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639776671435-nq915d886vimqeibcvt2jsaqt1k4641t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jitney_app",
+            "certificate_hash": "316e6651a1e231f1bbed6d1d77c9316b27843c0d"
+          }
+        },
+        {
+          "client_id": "639776671435-i4fpkpo094nq9ip9g27anp38rb0d8fk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVYU3ZV1BR0bfFj0SqsfhR1aJRsdMGxjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639776671435-i4fpkpo094nq9ip9g27anp38rb0d8fk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
