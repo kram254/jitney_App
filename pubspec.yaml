@@ -40,6 +40,11 @@ dependencies:
   http:
   flutter_google_places:
   geoflutterfire:
+  url_launcher: ^5.7.10
+  get_it: ^5.0.4
+  firebase_messaging: ^7.0.3
+  flutter_rating_bar: ^3.2.0+1
+  percent_indicator: ^2.1.9
 
 
   # The following adds the Cupertino Icons font to your application.
