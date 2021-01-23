@@ -25,7 +25,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
     return Scaffold(
       key: _key,
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: orange,
       body: authProvider.status == Status.Authenticating? Loading() : SingleChildScrollView(
         child: Column(
           children: <Widget>[

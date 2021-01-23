@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       key: _key,
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: orange,
       body: authProvider.status == Status.Authenticating? Loading() : SingleChildScrollView(
         child: Column(
           children: <Widget>[

@@ -1,28 +1,29 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:jitney_app/helpers/style.dart';
+import 'package:jitney_app/locators/service_locator.dart';
 import 'package:jitney_app/providers/user.dart';
-//import 'package:geolocator/geolocator.dart';
 import 'package:jitney_app/screens/home.dart';
+import 'package:jitney_app/screens/login.dart';
+import 'package:jitney_app/screens/splash.dart';
 import 'package:provider/provider.dart';
 import 'package:jitney_app/providers/app.dart';
-//import 'package:shared_preferences/shared_preferences.dart';
-//import 'package:jitney/helpers/constants.dart';
+import 'package:jitney_app/helpers/constants.dart';
 
 
 void main () async{
 WidgetsFlutterBinding.ensureInitialized();
+setupLocator();
+
   return runApp(MultiProvider(
     providers: [
     ChangeNotifierProvider<AppProvider>.value(
-      value: AppProvider.initialize()
+      value: AppProvider()
       ),
     ChangeNotifierProvider.value(value: UserProvider.initialize()),
   ],
     child:MaterialApp(
       debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: Colors.yellow,
-        ),
+        theme: ThemeData(primaryColor: orange),
         title: "J!tney",
         home: MyApp()),
     
@@ -30,13 +31,13 @@ WidgetsFlutterBinding.ensureInitialized();
 }
 
 class MyApp extends StatelessWidget {
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-
-  @override
+   @override
   Widget build(BuildContext context) {
+    UserProvider auth = Provider.of<UserProvider>(context);
+
     return FutureBuilder(
       // Initialize FlutterFire:
-      future: _initialization,
+      future: initialization,
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
@@ -49,8 +50,18 @@ class MyApp extends StatelessWidget {
         }
 
         // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return HomeScreen(title: 'J!tney');
+       if (snapshot.connectionState == ConnectionState.done) {
+          switch (auth.status) {
+            case Status.Uninitialized:
+              return Splash();
+            case Status.Unauthenticated:
+            case Status.Authenticating:
+              return LoginScreen();
+            case Status.Authenticated:
+              return HomeScreen();
+            default:
+              return LoginScreen();
+          }
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
