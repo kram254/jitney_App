@@ -23,7 +23,7 @@ setupLocator();
   ],
     child:MaterialApp(
       debugShowCheckedModeBanner: false,
-        theme: ThemeData(primaryColor: orange),
+        theme: ThemeData(primaryColor: orange  ),
         title: "J!tney",
         home: MyApp()),
     

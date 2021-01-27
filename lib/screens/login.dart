@@ -27,23 +27,23 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: <Widget>[
             Container(
-              color: white,
+              color: orange,
               height: 100,
             ),
 
             Container(
-              color: white,
+              color: orange,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset("images/lg.png", width: 230, height: 230,),
+                  Image.asset("images/logo.png", width: 230, height: 230,),
                 ],
               ),
             ),
 
             Container(
               height: 60,
-              color: white,
+              color: orange,
             ),
            SizedBox(
              height: 20,
@@ -102,14 +102,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: black,
+                    color: white,
                       borderRadius: BorderRadius.circular(5)
                   ),
                   child: Padding(padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        CustomText(text: "Login", color: white, size: 22,)
+                        CustomText(text: "Login", color: black, size: 22,)
                       ],
                     ),),
                 ),
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CustomText(text: "Register here", size: 20,),
+                  CustomText(text: "Register here", size: 20, color: white,)
                 ],
               ),
             ),

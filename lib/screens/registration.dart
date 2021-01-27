@@ -35,18 +35,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             Container(
-              color: white,
+              color: orange,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset("images/lg.png", width: 230, height: 120,),
+                  Image.asset("images/logo.png", width: 230, height: 230,),
                 ],
               ),
             ),
 
             Container(
               height: 40,
-              color: white,
+              color: orange,
             ),
             SizedBox(
               height: 20,
@@ -151,14 +151,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                      color: black,
+                      color: white,
                       borderRadius: BorderRadius.circular(5)
                   ),
                   child: Padding(padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        CustomText(text: "Register", color: white, size: 22,)
+                        CustomText(text: "Register", color: black, size: 22,)
                       ],
                     ),),
                 ),
